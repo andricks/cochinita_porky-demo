@@ -1,5 +1,5 @@
 # 1. Usar una imagen ligera de Node.js
-FROM node:18-alpine
+FROM node:20-alpine
 
 # 2. Definir carpeta de trabajo dentro del contenedor
 WORKDIR /app
