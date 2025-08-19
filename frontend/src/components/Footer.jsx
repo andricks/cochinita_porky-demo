@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="brand-badge">🐷</div>
-          <span>PiggyShop</span>
+          <span>Porky Pig</span>
         </div>
-        <p>© 2025 PiggyShop. Todos los derechos reservados. Hecho con 💖</p>
+        <p>© 2025 Porky Pig. Todos los derechos reservados. Hecho con 💖</p>
       </div>
     </footer>
   );

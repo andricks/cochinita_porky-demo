@@ -17,13 +17,13 @@ const Navbar = () => {
         background: `linear-gradient(90deg, rgba(244,114,182,${
           0.95 + scrollY * 0.001
         }) 0%, rgba(236,72,153,${0.95 + scrollY * 0.001}) 100%)`,
-        boxShadow: `0 8px 28px rgba(236,72,153,${0.2 + scrollY * 0.002})`,
+        boxShadow: `0 0px 8px rgba(236,72,153,${0.2 + scrollY * 0.002})`,
       }}
     >
       <div className="nav-inner">
         <a href="#" className="brand">
           <div className="brand-badge">🐷</div>
-          <span>PiggyShop</span>
+          <span>Porky Pig</span>
         </a>
 
         <nav className="nav-links">
