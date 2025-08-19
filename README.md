@@ -122,9 +122,26 @@ El frontend se ejecuta por defecto en el puerto **3000**.
 Orquestación con Docker Compose
 
 Desde la raíz del proyecto:
-```
-docker-compose up --build
-```
+
+### Despliegue con Docker para Entorno de Desarrollo
+
+Inicializar docker Entorno desarollo :
+
+docker compose -f docker-compose.dev.yml up --build
+
+Bajar los cambios: 
+
+docker compose -f docker-compose.dev.yml down
+
+### Entorno de Producción 
+
+Inicializar docker Entorno Produccion :
+
+docker compose -f docker-compose.prod.yml up --build -d
+
+Bajar los cambios: 
+
+docker compose -f docker-compose.prod.yml down
 
 Esto levantará los siguientes servicios:
 

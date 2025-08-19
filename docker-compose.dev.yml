@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app         # monta tu código dentro del contenedor
+      - /app/node_modules      # evita que node_modules local sobreescriba los del contenedor
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true  
+      - CHOKIDAR_INTERVAL=100
+      - WATCHPACK_POLLING=true # hace que react detecte cambios dentro de Docker
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
